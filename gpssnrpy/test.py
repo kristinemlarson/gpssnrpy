@@ -15,9 +15,8 @@ import gpssnrpy.gpssnr as gpssnr
 
 def binary(string):
     """
-    newfangled way to send character arrays to fortran using f2py
-    yippeee
-    input is a string - output is bytes?
+    changes python string to bytes for use in
+    fortran code using f2py
     """
     j=bytes(string,'ascii') + b'\0\0'
 
@@ -28,28 +27,31 @@ def binary(string):
 
 def main():
     """
-    command line interface for download_rinex
+    command line interface for running gpssnr from python
+    inputs are the two inputs (obs and nav), output, and snr choice
     """
 
     parser = argparse.ArgumentParser()
     parser.add_argument("rinex", help="rinexname", type=str)
     parser.add_argument("nav", help="navfile", type=str)
     parser.add_argument("output", help="outputfile", type=str)
-    parser.add_argument("filetype",   help="e.g. 66, 99", type=str)
+    parser.add_argument("filetype",   help="e.g. 50, 66, 88, 99", type=str)
 
     args = parser.parse_args()
 
 
-#   assign to normal variables
+#   assign inputs to normal variable names
     rinexfile = args.rinex 
     snrname = args.output
     orbit = args.nav 
     snrtype = args.filetype
 
-    if snrtype not in ['99', '66','50','88','77']:
+    # these are allowed choices
+    if snrtype not in ['99', '66','50','88']:
         print('Illegal snrtype choice',  snrtype)
         sys.exit()
 
+    # check that inputs exist before calling code
     if os.path.isfile(rinexfile) and os.path.isfile(orbit):
         in1 = binary(rinexfile); in2 = binary(snrname);
         in3 = binary(orbit); in4 = binary(snrtype)

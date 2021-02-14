@@ -10,11 +10,11 @@ ext1 = Extension(name='gpssnrpy.gpssnr',
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["numpy","wget","scipy"]
+requirements = ["numpy"]
 
 setup(
     name="gpssnrpy",
-    version="0.0.1",
+    version="0.0.2",
     author="Kristine Larson",
     author_email="kristinem.larson@gmail.com",
     description="A GPS/SNR translation software package ",
