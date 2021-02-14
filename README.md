@@ -15,7 +15,6 @@ first version is a port of gpsSNR.f).
 
 ### to run from the commandline
 
-Restrictions: only GPS satellites are translated
 
 Inputs:
 
@@ -29,11 +28,11 @@ Inputs:
 
 and then:
 
-**transRinex rinexname navname output 99**
+*transRinex rinexname navname output 99*
 
 I have provided two smallish files you can use to test the code:
 
-**transRinex p1011500.20o auto1500.20n p1011500.snr 99**
+*transRinex p1011500.20o auto1500.20n p1011500.snr 99*
 
 
 
