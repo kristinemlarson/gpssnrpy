@@ -17,7 +17,7 @@ setup(
     version="0.0.2",
     author="Kristine Larson",
     author_email="kristinem.larson@gmail.com",
-    description="A GPS/SNR translation software package ",
+    description="A GPS/SNR translation software package1 ",
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/kristinemlarson/gpssnrpy/",
