@@ -25,7 +25,7 @@ setup(
     include_package_data=True,
     entry_points ={
         'console_scripts': [
-            'transRinex = gpssnrpy.test:main',
+            'gpssnr = gpssnrpy.gpssnr_cl:main',
             ],
         },
     install_requires=requirements,
