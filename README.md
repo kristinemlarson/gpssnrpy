@@ -18,24 +18,32 @@ first version is a port of gpsSNR.f.
 
 Inputs:
 
-* RINEX v 2.11 observation filename
-
-* RINEX v 2.11 navigation filename
-
+* RINEX v2.11 observation filename
 * output filename
-
+* RINEX v2.11 navigation filename
 * SNR choice (99, 66, 88, 50) as defined at the gnssrefl website
 
-and then:
+Optional
+* -dec decimation (seconds)
 
-* transRinex rinexname navname output 99
+Thus this translates and decimates to 30 seconds:
 
-I have provided two smallish files you can use to test the code:
+* gpssnr rinexname outputname navname 99 -dec 30
 
-* transRinex p1011500.20o auto1500.20n p1011500.snr 99
+or translates it all:
+
+* gpssnr rinexname outputname navname 99 
+
+I have provided a small obs file (and nav file) you can use to test the code:
+
+* gpssnr p1011500.20o p1011500.snr auto1500.20n  99 -dec 30
 
 
 
 I am still working on this documentation
 
 Kristine M. Larson
+
+Thank you to the developers of numpy for providing excellent documentation for f2py 
+and [raxod502](https://github.com/raxod502) for his package management help!
+
