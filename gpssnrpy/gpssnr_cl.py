@@ -13,8 +13,9 @@ import time
 # this is the fortran code KL wrote 
 import gpssnrpy.gpssnr as gpssnr
 
-# these are utilities
-import gpssnrpy.utils as u
+# these are (mostly gps) utilities
+# here it is only used to convert strings to bytes to interface with fortran
+import gpssnrpy.gps as g
 
 
 
@@ -52,9 +53,9 @@ def main():
 
     # check that inputs exist before calling code
     if os.path.isfile(rinexfile) and os.path.isfile(orbit):
-        in1 = u.binary(rinexfile); in2 = u.binary(snrname);
-        in3 = u.binary(orbit); in4 = u.binary(snrtype)
-        in5= u.binary(dec)
+        in1 = g.binary(rinexfile); in2 = g.binary(snrname);
+        in3 = g.binary(orbit); in4 = g.binary(snrtype)
+        in5= g.binary(dec)
         t1 = time.time()
         gpssnr.foo(in1,in2,in3,in4,in5)
         t2 = time.time()

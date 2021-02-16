@@ -10,11 +10,11 @@ ext1 = Extension(name='gpssnrpy.gpssnr',
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["numpy"]
+requirements = ["numpy","scipy","wget","matplotlib"]
 
 setup(
     name="gpssnrpy",
-    version="0.0.2",
+    version="0.0.3",
     author="Kristine Larson",
     author_email="kristinem.larson@gmail.com",
     description="A GPS/SNR translation software package1 ",
@@ -25,7 +25,9 @@ setup(
     include_package_data=True,
     entry_points ={
         'console_scripts': [
-            'gpssnr = gpssnrpy.gpssnr_cl:main',
+            'gpssnr = gpssnrpy.gpssnr_cl:main', 
+            'download_rinex = gpssnrpy.download_rinex:main', 
+            'download_orbits = gpssnrpy.download_orbits:main',
             ],
         },
     install_requires=requirements,
