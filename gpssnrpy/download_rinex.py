@@ -9,7 +9,7 @@ import os
 import sys
 
 # library of mostly related gps functions
-import gprsnrpy.gps as g
+import gpssnrpy.gps as g
 
 def version3(station,year,doy,NS,archive):
     """
