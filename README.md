@@ -25,7 +25,7 @@ that I originally packaged with [gnssrefl](https://github.com/kristinemlarson/gn
 * pip install .
 
 
-###Usage of gpssnr<a name="usage"></a>
+### Usage of gpssnr<a name="usage"></a>
 
 Inputs:
 
@@ -39,9 +39,7 @@ Optional
 
 Sample usage: 
 
-*gpssnr rinexname outputname navname 99*
-
-*gpssnr rinexname outputname navname 99 -dec 30*
+* gpssnr rinexname outputname navname 99
 
 
 I have provided a small obs file (and nav file) you can use to test the code:
@@ -51,9 +49,9 @@ I have provided a small obs file (and nav file) you can use to test the code:
 
 ### Download RINEX files<a name="rinex"></a>
 
-*download_rinex station year month day* 
+* download_rinex station year month day 
 
-also *download_rinex station year doy 0*
+* download_rinex station year doy 0
 
 The station name, station, must be four character and lower case.
 The default is RINEX version 2.11 and low-rate files.
@@ -71,13 +69,13 @@ folder with the environment variable EXE**
 
 ### Download orbit files<a name="orbits"></a>
 
-*download_orbits src year month day*
+* download_orbits src year month day
 
 Sample usage: 
 
-*download_orbits nav 2020 150 0*  is nav file for year 2020 and day of year 150
+* download_orbits nav 2020 150 0   (for doy 150)
 
-*download_orbits nav 2020 12 31*  is nav file for December 31 in the year 2020 
+* download_orbits nav 2020 12 31 (for December 31)
 
 orbit sources (src) currently allowed (lowercase):
 
@@ -94,6 +92,10 @@ orbit sources (src) currently allowed (lowercase):
 
 I am still working on this documentation. I will be adding instructions 
 on how to use these as libraries.
+
+Multi-GNSS capabilities, a la gnssSNR, will be added.
+
+This capability will be added to gnssrefl.
 
 Kristine M. Larson
 https://kristinelarson.net
