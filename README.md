@@ -1,11 +1,17 @@
 ### gpssnrpy
 
+-[Installation](#installation)
+-[Usage](#usage)
+-[RINEX downloader](#download RINEX files)
+-[ORBIT downloader](#download ORBIT files)
+-[Future work and acknowledgements](#future work)
+
 This library will allow python users easy access to RINEX translators 
 currently only provided in Fortran (gpsSNR.f and gnssSNR.f).  This 
 first version is a port of gpsSNR.f.  I have also included some utilities
 that I originally packaged with [gnssrefl](https://github.com/kristinemlarson/gnssrefl).  
 
-### to install 
+## Installation
 
 * git clone https://github.com/kristinemlarson/gpssnrpy
 
@@ -14,8 +20,7 @@ that I originally packaged with [gnssrefl](https://github.com/kristinemlarson/gn
 * pip install .
 
 
-### to run from the commandline
-
+## Usage
 
 Inputs:
 
@@ -39,7 +44,7 @@ I have provided a small obs file (and nav file) you can use to test the code:
 * gpssnr p1011500.20o p1011500.snr auto1500.20n  99 
 
 
-### download RINEX  files
+## download RINEX files
 
 *download_rinex station year month day* 
 
@@ -58,7 +63,7 @@ These are currently supported archives: sopac, unavco, sonel, cddis, nz, ga, bkg
 folder with the environment variable EXE**
 
 
-### download orbits (nav and sp3)
+## download orbit files
 
 *download_orbits src year month day*
 
@@ -78,6 +83,8 @@ orbit sources (src) currently allowed (lowercase):
 * grg: French group, GPS, Galileo and Glonass, not rapid
 * wum : Wuhan, multi-GNSS, not rapid
 
+
+## work to do
 
 I am still working on this documentation. I will be adding instructions 
 on how to use these as libraries.
