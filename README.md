@@ -3,14 +3,16 @@
 ### Table of Contents 
 
 1. [Installation](#installation)
-2. [Usage](#usage)
+2. [gpssnr usage](#usage)
 3. [RINEX downloader](#rinex)
-4. [ORBIT downloader](#orbits)
+4. [Orbit downloader](#orbits)
 5. [Future work and acknowledgements](#future)
 
-This library will allow python users easy access to RINEX translators 
-currently only provided in Fortran (gpsSNR.f and gnssSNR.f).  This 
-first version is a port of gpsSNR.f.  I have also included some utilities
+The gpssnr python library (gpssnrpy) will allow python 
+users easy access to RINEX translators currently only provided in 
+Fortran -  [gpsSNR](https://github.com/kristinemlarson/gpsonlySNR) 
+and [gnssSNR](https://github.com/kristinemlarson/gnssSNR). This 
+first version is a port of gpsSNR. I have also included some utilities
 that I originally packaged with [gnssrefl](https://github.com/kristinemlarson/gnssrefl).  
 
 ### Installation<a name="installation"></a>
@@ -23,7 +25,7 @@ that I originally packaged with [gnssrefl](https://github.com/kristinemlarson/gn
 * pip install .
 
 
-###Usage<a name="usage"></a>
+###Usage of gpssnr<a name="usage"></a>
 
 Inputs:
 
