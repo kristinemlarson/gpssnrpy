@@ -2,3 +2,6 @@ pip
 wheel
 twine
 numpy
+matplotlib
+wget
+scipy

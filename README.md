@@ -3,7 +3,7 @@
 This library will allow python users easy access to RINEX translators 
 currently only provided in Fortran (gpsSNR.f and gnssSNR.f).  This 
 first version is a port of gpsSNR.f.  I have also included some utilities
-that I originally packaged with [gnssrefl](https://github.com/kristine/gnssrefl).  
+that I originally packaged with [gnssrefl](https://github.com/kristinemlarson/gnssrefl).  
 
 ### to install 
 
@@ -27,20 +27,18 @@ Inputs:
 Optional
 * -dec decimation (seconds)
 
-Thus this translates and decimates to 30 seconds:
+*usage: gpssnr rinexname outputname navname 99*
 
-* gpssnr rinexname outputname navname 99 -dec 30
+This translates and decimates to 30 seconds:
 
-or translates it all:
-
-* gpssnr rinexname outputname navname 99 
+*usage: gpssnr rinexname outputname navname 99 -dec 30*
 
 I have provided a small obs file (and nav file) you can use to test the code:
 
-* gpssnr p1011500.20o p1011500.snr auto1500.20n  99 -dec 30
+* gpssnr p1011500.20o p1011500.snr auto1500.20n  99 
 
 
-### download RINEX 
+### download RINEX  files
 
 *download_rinex station year month day* 
 
@@ -51,18 +49,25 @@ Please use -h to find out how to download high rate or version 3.
 
 Optional:
 
-* archive  ['sopac', 'unavco','sonel','cddis','nz','ga','bkg','jeff','ngs','nrcan']
+* archive  
+
+These are currently supported archives: sopac, unavco, sonel, cddis, nz, ga, bkg, ngs, nrcan 
 
 You need to install CRX2RNX for true access to these RINEX files.  It should be stored in a 
 folder with the environment variable EXE
-
 
 
 ### download orbits (nav and sp3)
 
 *download_orbits src year month day*
 
-orbit sources (src) currently allowed:
+samples: 
+
+*usage: download_orbits nav 2020 150 0*  is nav file for year 2020 and day of year 150
+
+*usage: download_orbits nav 2020 12 31*  is nav file for December 31 in the year 2020 
+
+orbit sources (src) currently allowed (lowercase):
 
 * nav : GPS broadcast, perfectly adequate for reflectometry.
 * igs : IGS precise, GPS only
@@ -71,8 +76,6 @@ orbit sources (src) currently allowed:
 * gbm : GFZ Potsdam, multi-GNSS, not rapid
 * grg: French group, GPS, Galileo and Glonass, not rapid
 * wum : Wuhan, multi-GNSS, not rapid
-
-
 
 
 I am still working on this documentation. I will be adding instructions 
