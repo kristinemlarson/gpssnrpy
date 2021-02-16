@@ -27,11 +27,12 @@ Inputs:
 Optional
 * -dec decimation (seconds)
 
-*usage: gpssnr rinexname outputname navname 99*
+Sample usage: 
 
-This translates and decimates to 30 seconds:
+*gpssnr rinexname outputname navname 99*
 
-*usage: gpssnr rinexname outputname navname 99 -dec 30*
+*gpssnr rinexname outputname navname 99 -dec 30*
+
 
 I have provided a small obs file (and nav file) you can use to test the code:
 
@@ -53,19 +54,19 @@ Optional:
 
 These are currently supported archives: sopac, unavco, sonel, cddis, nz, ga, bkg, ngs, nrcan 
 
-You need to install CRX2RNX for true access to these RINEX files.  It should be stored in a 
-folder with the environment variable EXE
+**You need to install CRX2RNX for true access to these RINEX files.  It should be stored in a 
+folder with the environment variable EXE**
 
 
 ### download orbits (nav and sp3)
 
 *download_orbits src year month day*
 
-samples: 
+Sample usage: 
 
-*usage: download_orbits nav 2020 150 0*  is nav file for year 2020 and day of year 150
+*download_orbits nav 2020 150 0*  is nav file for year 2020 and day of year 150
 
-*usage: download_orbits nav 2020 12 31*  is nav file for December 31 in the year 2020 
+*download_orbits nav 2020 12 31*  is nav file for December 31 in the year 2020 
 
 orbit sources (src) currently allowed (lowercase):
 
