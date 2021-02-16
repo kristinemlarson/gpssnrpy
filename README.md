@@ -1,10 +1,12 @@
-### gpssnrpy
+## gpssnrpy
 
--[Installation](#installation)
--[Usage](#usage)
--[RINEX downloader](#rinex)
--[ORBIT downloader](#orbits)
--[Future work and acknowledgements](#future)
+### Table of Contents 
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [RINEX downloader](#rinex)
+4. [ORBIT downloader](#orbits)
+5. [Future work and acknowledgements](#future)
 
 This library will allow python users easy access to RINEX translators 
 currently only provided in Fortran (gpsSNR.f and gnssSNR.f).  This 
